@@ -1,18 +1,20 @@
 {
-  "name": "atom-reporting-web-app",
-  "version": "0.0.0",
+  "name": "@atom-platform/ngx-charts-web",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "npm run build-lib && ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build-lib": "ng build --prod atom-reporting-web",
-    "npm-pack": "cd dist/atom-reporting-web && npm pack",
-    "package": "npm run build-lib && npm run npm-pack"
+    "build-lib": "ng build --prod ngx-charts-web",
+    "version-major": "cd projects/ngx-charts-web && npm version major && cd ../.. && git add . && git commit -m 'updating lib version' && npm version major",
+    "version-minor": "cd projects/ngx-charts-web && npm version minor && cd ../.. && git add . && git commit -m 'updating lib version' && npm version minor",
+    "version-patch": "cd projects/ngx-charts-web && npm version patch && cd ../.. && git add . && git commit -m 'updating lib version' && npm version patch",
+    "publish": "npm run build-lib && cd dist/ngx-charts-web && npm publish --access public"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/common": "^6.0.3",
     "@angular/core": "^6.0.3",
@@ -51,5 +53,22 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
-  }
+  },
+  "description": "Angular6 reporting components",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atom-platform/ngx-charts-web.git"
+  },
+  "keywords": [
+    "widgets",
+    "reporting",
+    "ui"
+  ],
+  "author": "atom-platform",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atom-platform/ngx-charts-web/issues"
+  },
+  "homepage": "https://github.com/atom-platform/ngx-charts-web#readme"
 }

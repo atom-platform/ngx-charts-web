@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "atom-reporting-web-app": {
+    "ngx-charts-web-app": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/atom-reporting-web-app",
+            "outputPath": "dist/ngx-charts-web-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "atom-reporting-web-app:build"
+            "browserTarget": "ngx-charts-web-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "atom-reporting-web-app:build:production"
+              "browserTarget": "ngx-charts-web-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "atom-reporting-web-app:build"
+            "browserTarget": "ngx-charts-web-app:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "atom-reporting-web-app-e2e": {
+    "ngx-charts-web-app-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "atom-reporting-web-app:serve"
+            "devServerTarget": "ngx-charts-web-app:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "atom-reporting-web-app:serve:production"
+              "devServerTarget": "ngx-charts-web-app:serve:production"
             }
           }
         },
@@ -122,38 +122,38 @@
         }
       }
     },
-    "atom-reporting-web": {
-      "root": "projects/atom-reporting-web",
-      "sourceRoot": "projects/atom-reporting-web/src",
+    "ngx-charts-web": {
+      "root": "projects/ngx-charts-web",
+      "sourceRoot": "projects/ngx-charts-web/src",
       "projectType": "library",
-      "prefix": "atom",
+      "prefix": "ngx",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
           "options": {
-            "tsConfig": "projects/atom-reporting-web/tsconfig.lib.json",
-            "project": "projects/atom-reporting-web/ng-package.json"
+            "tsConfig": "projects/ngx-charts-web/tsconfig.lib.json",
+            "project": "projects/ngx-charts-web/ng-package.json"
           },
           "configurations": {
             "production": {
-              "project": "projects/atom-reporting-web/ng-package.prod.json"
+              "project": "projects/ngx-charts-web/ng-package.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/atom-reporting-web/src/test.ts",
-            "tsConfig": "projects/atom-reporting-web/tsconfig.spec.json",
-            "karmaConfig": "projects/atom-reporting-web/karma.conf.js"
+            "main": "projects/ngx-charts-web/src/test.ts",
+            "tsConfig": "projects/ngx-charts-web/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-charts-web/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/atom-reporting-web/tsconfig.lib.json",
-              "projects/atom-reporting-web/tsconfig.spec.json"
+              "projects/ngx-charts-web/tsconfig.lib.json",
+              "projects/ngx-charts-web/tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -163,5 +163,5 @@
       }
     }
   },
-  "defaultProject": "atom-reporting-web-app"
+  "defaultProject": "ngx-charts-web-app"
 }

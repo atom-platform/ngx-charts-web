@@ -9,4 +9,4 @@ import { DonutGaugeComponent } from './components/donut-gauge';
   declarations: [DonutGaugeComponent],
   exports: [DonutGaugeComponent]
 })
-export class AtomReportingWebModule { }
+export class NgxChartsWebModule { }

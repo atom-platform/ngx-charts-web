@@ -1,0 +1,24 @@
+{
+  "name": "@atom-platform/ngx-charts-web",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0"
+  },
+  "description": "Component library by Atom Platform",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atom-platform/ngx-charts-web.git"
+  },
+  "keywords": [
+    "widgets",
+    "reporting",
+    "ui"
+  ],
+  "author": "atom-platform",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atom-platform/ngx-charts-web/issues"
+  },
+  "homepage": "https://github.com/atom-platform/ngx-charts-web#readme"
+}

@@ -2,14 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AtomReportingWebModule } from 'atom-reporting-web';
+import { NgxChartsWebModule } from 'ngx-charts-web';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    AtomReportingWebModule
+    NgxChartsWebModule
   ],
   providers: [],
   bootstrap: [AppComponent]

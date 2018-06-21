@@ -1,6 +1,6 @@
 {
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
-  "dest": "../../dist/atom-reporting-web",
+  "dest": "../../dist/ngx-charts-web",
   "lib": {
     "entryFile": "src/public_api.ts"
   }

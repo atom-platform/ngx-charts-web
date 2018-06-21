@@ -17,11 +17,11 @@
       "dom"
     ],
     "paths": {
-      "atom-reporting-web": [
-        "dist/atom-reporting-web"
+      "ngx-charts-web": [
+        "dist/ngx-charts-web"
       ],
-      "atom-reporting-web/*": [
-        "dist/atom-reporting-web/*"
+      "ngx-charts-web/*": [
+        "dist/ngx-charts-web/*"
       ]
     }
   }
