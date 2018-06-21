@@ -1,0 +1,43 @@
+<div class='donut-gauge'>
+  <svg class='donut-gauge__graphic' width='100px' height='100px' viewBox='0 0 100 100'>
+    <title>{{title}}</title>
+    <defs>
+      <linearGradient [attr.id]="gradientId" 
+        [attr.x1]="gradientSource.x1" [attr.y1]="gradientSource.y1"
+        [attr.x2]="gradientSource.x2" [attr.y2]="gradientSource.y2">
+        <stop *ngFor="let item of gradient" [attr.offset]="item.percent" [attr.stop-color]="item.color" />
+      </linearGradient>
+    </defs>
+
+    <circle class='donut-gauge__background' 
+      [attr.r]="circleRadius" 
+      cx="50%" 
+      cy="50%" 
+      [ngStyle]="baseCircleStyles" />
+    <circle class='donut-gauge__gauge' 
+      transform="rotate(-90,50,50)" 
+      [attr.r]="circleRadius" 
+      cx="50%" 
+      cy="50%" 
+      [ngStyle]="gaugeStyles" />
+    
+      <text 
+      class='donut-gauge__value' 
+      text-anchor="middle" 
+      x="50" 
+      attr.y="{{label? 54 : 59 }}" 
+      font-size="23px"
+      [ngStyle]="fontStyles">
+      {{value |percent: '.0-0'}}
+    </text>
+    <text *ngIf='label'
+      class='donut-gauge__label' 
+      text-anchor="middle" 
+      x="50" 
+      y="68" 
+      font-size="12px"
+      [ngStyle]="fontStyles">
+      {{label}}
+    </text>
+  </svg>
+</div>
