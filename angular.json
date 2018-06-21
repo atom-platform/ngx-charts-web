@@ -126,7 +126,7 @@
       "root": "projects/atom-reporting-web",
       "sourceRoot": "projects/atom-reporting-web/src",
       "projectType": "library",
-      "prefix": "arw",
+      "prefix": "atom",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",

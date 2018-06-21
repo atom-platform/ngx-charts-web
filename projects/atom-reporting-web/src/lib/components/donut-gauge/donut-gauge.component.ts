@@ -3,7 +3,7 @@ import { IDonutGaugeConfig } from './donut-gauge.interface';
 import { DonutWidth, DonutGradientOrigin } from './donut-gauge.constants';
 
 @Component({
-  selector: 'arw-donut-gauge',
+  selector: 'atom-donut-gauge',
   templateUrl: './donut-gauge.component.html',
   styleUrls: ['./donut-gauge.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "arw",
+            "atom",
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "arw",
+            "atom",
             "kebab-case"
         ]
     }
