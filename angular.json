@@ -163,5 +163,10 @@
       }
     }
   },
-  "defaultProject": "ngx-charts-web-app"
+  "defaultProject": "ngx-charts-web-app",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }

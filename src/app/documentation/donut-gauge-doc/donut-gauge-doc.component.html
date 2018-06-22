@@ -1,0 +1,131 @@
+<h1>Donut Gauge Configuration</h1>
+<section>
+  <pre><code class="language-markup">
+    &lt;ngx-donut-gauge [value]="value" [config]="config"&gt;&lt;/ngx-donut-gauge&gt;
+  </code></pre>
+  <table>
+    <tr>
+      <td>
+        <code>value</code>
+      </td>
+      <td>A number between 0 and 1 inclusive that will be displayed as a percentage in the chart.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>config</code>
+      </td>
+      <td>Customization configuration for the chart. See example further down.</td>
+    </tr>
+  </table>
+</section>
+
+<button class="button-primary--large" (click)="changeValue()">change value</button>
+<section>
+  <h4>Default Styles</h4>
+  <div class="donut-gauge-demo">
+    <div class='donut-gauge-demo__small'>
+      <ngx-donut-gauge [value]=chartValue></ngx-donut-gauge>
+    </div>
+    <div class='donut-gauge-demo__med'>
+      <ngx-donut-gauge [value]=chartValue></ngx-donut-gauge>
+    </div>
+    <div class='donut-gauge-demo__large'>
+      <ngx-donut-gauge [value]=chartValue></ngx-donut-gauge>
+    </div>
+  </div>
+</section>
+<section>
+  <h4>Overriding configuration</h4>
+  <div class="donut-gauge-demo">
+    <div class='donut-gauge-demo__small'>
+      <ngx-donut-gauge [value]=chartValue [config]=chartOverride1></ngx-donut-gauge>
+    </div>
+    <div class='donut-gauge-demo__small'>
+      <ngx-donut-gauge [value]=chartValue [config]=chartOverride2></ngx-donut-gauge>
+    </div>
+  </div>
+</section>
+<section>
+  <h4>Dynamically Swapping Configuration</h4>
+  <button class="button-secondary--small" (click)='changeConfig()'>Swap</button>
+  <div class="donut-gauge-demo">
+    <div class='donut-gauge-demo__small'>
+      <ngx-donut-gauge [value]=chartValue [config]=chartOverride4></ngx-donut-gauge>
+    </div>
+  </div>
+</section>
+<section>
+  <h4>Sample Custom Configuration</h4>
+  <pre><code class="language-javascript">
+    // all fields are optional to override
+    // the gauge uses defaults if the config field is not overridden
+    config = &#123;
+      strokeWidth: DonutWidth.Thick,
+      gradientDirection: DonutGradientOrigin.BottomLeft,
+      gradientColors: ['#9d11af', '#309aad', '#cef995'],
+      baseColor: '#dae5c9',
+      textColor: '#309aad',
+      label: 'testLabel',
+      title: 'title'
+    &#125;;
+  </code></pre>
+  <p>
+    To get constants that
+    <code>strokeWidth</code> and
+    <code>gradientDirection</code> use, please import them from
+    <code>donut-gauge.constants.ts</code>.
+  </p>
+
+  <h5>Custom Parameters:</h5>
+  <table>
+    <tr>
+      <td>
+        <code>strokeWidth</code>
+      </td>
+      <td>Width of the stroke. See
+        <code>donut-gauge.constants.ts</code> for possible values. </td>
+    </tr>
+    <tr>
+      <td>
+        <code>gradientDirection</code>
+      </td>
+      <td>The starting direction of the linear gradient for the colors used in the gauge. See
+        <code>donut-gauge.constants.ts</code> for possible values.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>gradientColors</code>
+      </td>
+      <td>Takes array of colors in hexadecimal strings prefixed by with
+        <code>#</code>. The first color in the array is the color at the source of the gradient and the rest goes in order. For
+        a solid color, supply only 1 color in the array.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>baseColor</code>
+      </td>
+      <td>The color of the gauge base. Is grey by default. Takes a hexadecimal string prefixed with
+        <code>#</code>.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>textColor</code>
+      </td>
+      <td>The color of the percentage value and label in the middle. Is black by default. Takes a hexadecimal string prefixed
+        with
+        <code>#</code>.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>label</code>
+      </td>
+      <td>Optional text label under the percentage.</td>
+    </tr>
+    <tr>
+      <td>
+        <code>title</code>
+      </td>
+      <td>SVG Chart Title for accessibility purposes.</td>
+    </tr>
+  </table>
+</section>

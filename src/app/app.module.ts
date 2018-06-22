@@ -3,9 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { NgxChartsWebModule } from 'ngx-charts-web';
+import { DonutGaugeDocComponent } from './documentation/donut-gauge-doc/donut-gauge-doc.component';
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DonutGaugeDocComponent
   ],
   imports: [
     BrowserModule,
