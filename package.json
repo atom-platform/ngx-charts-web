@@ -14,7 +14,7 @@
     "version-major": "cd projects/ngx-charts-web && npm version major && cd ../.. && git add . && git commit -m 'updating lib version' && npm version major",
     "version-minor": "cd projects/ngx-charts-web && npm version minor && cd ../.. && git add . && git commit -m 'updating lib version' && npm version minor",
     "version-patch": "cd projects/ngx-charts-web && npm version patch && cd ../.. && git add . && git commit -m 'updating lib version' && npm version patch",
-    "publish": "npm run build-lib && cd dist/ngx-charts-web && npm publish --access public"
+    "publish": "npm publish dist/ngx-charts-web --access public"
   },
   "private": false,
   "dependencies": {
