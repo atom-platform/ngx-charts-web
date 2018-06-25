@@ -1,4 +1,8 @@
+# atom-platform charts for angular
+[![npm version](https://badge.fury.io/js/%40atom-platform%2Fngx-charts-web.svg)](https://www.npmjs.com/package/@atom-platform/ngx-charts-web)
+
 # ngx-charts-web
+
 Angular chart components
 
 Please use
