@@ -1,39 +1,20 @@
-# atom-platform charts for angular
+# Atom-Platform Charts for Angular
+
 [![npm version](https://badge.fury.io/js/%40atom-platform%2Fngx-charts-web.svg)](https://www.npmjs.com/package/@atom-platform/ngx-charts-web)
 
-# ngx-charts-web
+Ngx-charts-web is a responsible, accessible, open-source chart library by Atom Platform compatible with Angular 5+.
 
-Angular chart components
+## Quick links
 
-Please use
-```
-  ng g <component/service/etc> --project=ngx-charts-web
-```
-to generate things for the library. This will create the component/service/etc inside the `projects/ngx-charts-web` directory.
+[demo](https://ngx-charts-web-demo.stackblitz.io/) | [npm package](https://www.npmjs.com/package/@atom-platform/ngx-charts-web)
 
-To build the library use the command 
-```
-  npm run build-lib
-```
-To build the library and launch the documentation app, run
-```
-  npm run start
-```
-`ng serve` will only start the documentation app, but the library needs to be built as the app it as a dependency. 
+## Getting Started
 
-Library-side hot reloading to come in the future.
+```npm i @atom-platform/ngx-charts-web```
 
-To update version, use
-```
-  npm run version-major
-  npm run version-minor
-  npm run version-patch
-```
-depending on the type of version update. This is because the library has its own package.json and will need to be updated.
-
-To publish to npm, run
-```
-  npm run publish
-```
+#### Availble features
 
 
+Feature| Sample
+-|-
+Donut Gauge| `<ngx-donut-gauge [value]="0.75"></ngx-donut-gauge>`
