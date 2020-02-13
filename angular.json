@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "aot": true,
             "outputPath": "dist/ngx-charts-web-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -29,6 +30,12 @@
           },
           "configurations": {
             "production": {
+              "budgets": [
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb"
+                }
+              ],
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -137,7 +144,8 @@
           "configurations": {
             "production": {
               "project": "projects/ngx-charts-web/ng-package.prod.json"
-            }
+            ,              "tsConfig": "projects/ngx-charts-web/tsconfig.lib.prod.json"
+}
           }
         },
         "test": {
@@ -166,7 +174,7 @@
   "defaultProject": "ngx-charts-web-app",
   "schematics": {
     "@schematics/angular:component": {
-      "styleext": "scss"
+      "style": "scss"
     }
   }
 }
