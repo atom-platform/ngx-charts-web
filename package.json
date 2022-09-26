@@ -1,6 +1,6 @@
 {
   "name": "@atom-platform/ngx-charts-web",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "scripts": {
     "ng": "ng",
     "start": "npm run build-lib && ng serve",
